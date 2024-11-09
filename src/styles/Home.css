@@ -1,0 +1,998 @@
+/* Home.css */
+.home {
+  background-color: #ffffff;
+  /* Light background for the rest of the page */
+  color: rgb(17, 25, 47);
+  position: relative;
+  z-index: 5;
+}
+
+.banner-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  color: white;
+  overflow: hidden;
+  position: relative;
+
+  /* Set the blue background for the banner */
+  background-color: #5268F2 !important;
+  /* Blue background */
+
+  /* Dot Pattern Background */
+  background: radial-gradient(circle, #2d42c6 2px, transparent 2px),
+    radial-gradient(circle, #6b7dec 2px, transparent 2px);
+
+  background-size: 40px 40px;
+  /* size of the dot pattern */
+  background-position: 0 0, 10px 10px;
+  /* Offsets second layer for staggered effect */
+
+  background-attachment: fixed;
+  /* Keep the background fixed while scrolling */
+
+  /* Animation for moving dots */
+  animation: dotBackgroundMove 20s infinite linear;
+}
+
+/* Keyframes for animated dot background */
+@keyframes dotBackgroundMove {
+  0% {
+    background-position: 0 0, 10px 10px;
+  }
+
+  50% {
+    background-position: 10px 10px, 0 0;
+  }
+
+  100% {
+    background-position: 0 0, 10px 10px;
+  }
+}
+
+.banner-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 85%;
+  gap: 3rem;
+}
+
+.banner-text {
+  max-width: 50%;
+}
+
+.banner-text h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.banner-text p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  max-width: 30rem;
+}
+
+.banner-text ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.banner-text ul li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.learn-more-button {
+  margin-top: 30px;
+}
+
+.btn-learn-more {
+  padding: 12px 25px;
+  font-size: 1.2em;
+  background-color: #052b38;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 10px;
+}
+
+.btn-learn-more:hover {
+  background-color: #100820;
+  transform: scale(1.1);
+}
+
+.banner-video {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-video-element {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.home-content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.home-content h1 {
+  font-size: 2.5em;
+}
+
+.home-content p {
+  font-size: 1.2em;
+}
+
+.value-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.value-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.value-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Case Study Section */
+.client-case-studies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #ffffff;
+  /* Light background for contrast */
+}
+
+.client-case-studies h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #062367;
+  /* Color to match the branding */
+}
+
+/* Container for case study items */
+/* .case-studies-container { */
+/* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 20px; */
+/* Space between items */
+/* Padding for sides */
+/* } */
+
+/* Individual case study item */
+.case-study {
+  flex: 1;
+  max-width: 250px;
+  /* Reduced width for images */
+  padding: 10px;
+  background-color: #fff;
+  /* White background for each case study */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Light shadow for effect */
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.case-studies-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Hover effect for case study items */
+.case-study:hover {
+  transform: translateY(-10px);
+  /* Lift the case study */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  /* Enhance shadow on hover */
+}
+
+/* Image styles */
+.case-study img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  /* Rounded corners for images */
+  object-fit: cover;
+  /* Ensures the image covers the space properly */
+}
+
+.view-more-button-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.btn-view-more {
+  background-color: #275f97;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-view-more:hover {
+  background-color: #0056b3;
+}
+
+.mishipay-business {
+  background: linear-gradient(135deg, #007bff, #6c757d);
+  padding: 50px 0;
+  text-align: center;
+  margin-top: 50px;
+  border-top: 1px solid #e1e1e1;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.mishipay-business h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.mishipay-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.stat {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.stat h3 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #007bff;
+  font-weight: 600;
+}
+
+.stat p {
+  font-size: 18px;
+  color: #333;
+  font-weight: normal;
+}
+
+.stat .stat-icon {
+  font-size: 50px;
+  color: #007bff;
+  margin-bottom: 15px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: icon-animation 1s ease-in-out forwards;
+}
+
+.stat:hover .stat-icon {
+  opacity: 1;
+}
+
+.stat[data-stat="1"] .stat-icon {
+  animation-delay: 0.2s;
+}
+
+.stat[data-stat="2"] .stat-icon {
+  animation-delay: 0.4s;
+}
+
+.stat[data-stat="3"] .stat-icon {
+  animation-delay: 0.6s;
+}
+
+@keyframes icon-animation {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Stats Count Animation */
+.stat h3 {
+  position: relative;
+}
+
+.stat h3:before {
+  content: attr(data-value);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  font-size: 40px;
+  color: #fff;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.stat:hover h3:before {
+  opacity: 1;
+}
+
+.features-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 30px;
+}
+
+.feature-column {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+  height: auto;
+}
+
+.overlay {
+  position: relative;
+  width: 100%;
+
+}
+
+.feature-image,
+iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 8px;
+  background: rgba(5, 22, 35, 0.8);
+  /* Semi-transparent background */
+  border-radius: 8px;
+}
+
+.text-overlay2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(15, 2, 2);
+  text-align: center;
+  padding: 8px;
+  background: rgba(212, 217, 221, 0.7);
+  /* Semi-transparent background */
+  border-radius: 8px;
+
+}
+
+.read-more-link {
+  text-decoration: none;
+  color: #085fbb;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.read-more-link:hover {
+  text-decoration: underline;
+}
+
+
+.text-overlay h2 {
+  margin: 0;
+  font-size: 20px !important;
+  color: white !important;
+}
+
+.text-overlay p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.customer-reviews {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  /* Hide any content that overflows */
+}
+
+.customer-reviews h2 {
+  margin-bottom: 2rem;
+}
+
+.reviews-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* Display reviews horizontally */
+  text-align: center;
+  transition: transform 0.5s ease-in-out;
+  /* Add transition for movement */
+}
+
+.review-item {
+  width: 55%;
+  height: auto;
+  margin: 0 1.5rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  /* Initially hidden */
+  display: none;
+  /* Hide element */
+  transform: translateX(-20px) scale(0.9);
+  /* Optional: scale down when hidden */
+}
+
+/* Only show the active .review-item */
+.review-item.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0) scale(1);
+  /* Restore scale */
+}
+
+.review-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.review-logo {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.review-logo:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  transform: scale(1.1);
+}
+
+.review-text {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 1rem 0;
+  line-height: 1.6;
+  font-family: 'Arial', sans-serif;
+  text-align: left;
+}
+
+.review-star i {
+  color: #ffcc00;
+  margin: 0 2px;
+}
+
+.carousel-arrows {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.carousel-arrows button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.carousel-arrows button:hover {
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+/* Add the following CSS for sliding effect */
+.reviews-carousel.move-left {
+  transform: translateX(-100%);
+  /* Slide left */
+}
+
+.reviews-carousel.move-right {
+  transform: translateX(100%);
+  /* Slide right */
+}
+
+.elementor-section {
+  display: flex;
+  flex-direction: row;
+  /* Makes the section arrange its children horizontally */
+  justify-content: center;
+  /* Centers the images horizontally */
+  gap: 20px;
+  /* Adds space between the images */
+  flex-wrap: wrap;
+  /* Allows the images to wrap to the next line on smaller screens */
+}
+
+.elementor-column {
+  width: auto;
+  /* Allow each column to adjust to the image size */
+}
+
+.elementor-widget-image img {
+  width: 100%;
+  /* Makes each image fill its column's width */
+  max-width: 200px;
+  /* Optional: Sets a maximum width for the images */
+  height: auto;
+  /* Ensures the image maintains its aspect ratio */
+}
+
+.oppi_download_app_wrap {
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.col_reverse {
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.oppi_mockup_img .mockup_inner {
+  position: relative;
+}
+
+.download_1 img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.oppi_download_app_content {
+  position: relative;
+  border-radius: 10px;
+  width: 800px;
+  /* height: 200px; */
+  /* object-fit: cover; */
+  margin: 1rem;
+  padding: 20px;
+  background-color: #9bacbe;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Image styling */
+.oppi_download_app_wrap .download_1 {
+  animation: fadeInUp 1s ease-out;
+  animation-delay: 0.2s;
+}
+
+.oppi_download_app_wrap .download_1 img {
+  transform: translate3d(0px, 18.026px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+}
+
+/* Title fadeInUp animation */
+.oppi_download_app_wrap .sec_title {
+  animation: fadeInUp 1s ease-out;
+  animation-delay: 0.2s;
+}
+
+/* Paragraph fadeInUp animation */
+.oppi_download_app_wrap .download_para {
+  animation: fadeInUp 1s ease-out;
+  animation-delay: 0.3s;
+}
+
+/* Play Store button fadeInUp animation */
+.oppi_download_app_wrap .oppi_dbtn.btn_solid_color {
+  animation: fadeInUp 1s ease-out;
+  animation-delay: 0.4s;
+}
+
+/* App Store button fadeInUp animation */
+.oppi_download_app_wrap .oppi_dbtn.btn_border {
+  animation: fadeInUp 1s ease-out;
+  animation-delay: 0.5s;
+}
+
+/* Fade-in animation keyframe */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.sec_title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.download_para {
+  font-size: 16px;
+  color: #000304;
+}
+
+.oppi_btn_group {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  gap: 2rem;
+}
+
+.oppi_dbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+
+}
+
+.btn_solid_color {
+  background-color: #051a32;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn_border {
+  background-color: #ffffff;
+  border: none;
+  color: #06121e;
+  border-radius: 5px;
+}
+
+.oppi_download_app_wrap .download_1:hover {
+  transform: scale(1.04);
+
+}
+
+.iconify {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+
+  /* Home Section */
+  .home {
+    padding: 20px;
+  }
+
+  /* Banner Section */
+  .banner-section {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .banner-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .banner-text h1 {
+    font-size: 2.5em;
+  }
+
+  .banner-text p {
+    font-size: 1.1em;
+  }
+
+  .banner-text ul li {
+    font-size: 1em;
+  }
+
+  .banner-video {
+    display: none;
+    /* width: 100%;
+    margin-top: 20px; */
+  }
+
+  /* Home Content */
+  .home-content h1 {
+    font-size: 2em;
+  }
+
+  .home-content p {
+    font-size: 1em;
+  }
+
+  /* Value Section */
+  .value-section h2 {
+    font-size: 20px;
+  }
+
+  .value-image {
+    max-width: 90%;
+    height: auto;
+  }
+
+  /* Case Study Section */
+  .client-case-studies {
+    padding: 30px 20px;
+  }
+
+  .client-case-studies h2 {
+    font-size: 2em;
+  }
+
+  .case-studies-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .case-study {
+    max-width: 100%;
+  }
+
+  /* Mishipay Business Section */
+  .mishipay-business {
+    padding: 40px 20px;
+  }
+
+  .mishipay-business h2 {
+    font-size: 28px;
+  }
+
+  .mishipay-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .stat h3 {
+    font-size: 36px;
+  }
+
+  /* Features Section */
+  .features-section {
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px;
+  }
+
+  .feature-column {
+    min-width: 100%;
+    height: auto;
+  }
+
+  /* Text Overlay */
+  .text-overlay h2 {
+    font-size: 18px;
+  }
+
+  .text-overlay p {
+    font-size: 14px;
+  }
+
+  /* Customer Reviews Section */
+  .customer-reviews {
+    padding: 1rem;
+  }
+
+  .reviews-carousel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review-item {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .carousel-arrows {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .carousel-arrows button {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+
+  /* Elementor Section */
+  .elementor-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .elementor-widget-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .oppi_download_app_wrap {
+    padding: 30px 20px;
+  }
+}
+
+/* Mobile responsiveness for smaller screens */
+@media (max-width: 767px) {
+  .oppi_download_app_content {
+    max-width: 350px;
+    /* Full-width on mobile */
+    padding: 0 20px;
+    /* Add padding for spacing */
+    margin-top: 15px;
+    padding-top: 10px;
+  }
+
+  .sec_title {
+    font-size: 18px !important;
+    /* Slightly smaller font for mobile */
+  }
+
+  .download_para {
+    font-size: 14px;
+    /*  paragraph font size for mobile */
+  }
+
+  .oppi_btn_group {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    /* Stack the buttons vertically */
+    /* Center the buttons */
+
+  }
+
+  .oppi_dbtn {
+    width: 120px;
+    /* Make buttons full width */
+
+    font-size: 10px;
+  }
+
+  .oppi_dbtn:last-child {
+    margin-bottom: 0;
+    /* Remove bottom margin from last button */
+  }
+}
+
+@media (max-width: 576px) {
+  .sec_title {
+    font-size: 20px;
+    /*  the title font size further */
+  }
+
+  .download_para {
+    font-size: 13px;
+    /*  the paragraph font size further */
+  }
+
+  .oppi_btn_group {
+    flex-direction: column;
+    /* Ensure buttons stay stacked on small screens */
+    gap: 15px;
+    /* More gap between buttons */
+  }
+}
+
+/* For Extra Small Devices (Phones in Portrait Mode) */
+@media (max-width: 480px) {
+
+  /* Banner Text */
+  .banner-text h1 {
+    font-size: 2em;
+  }
+
+  .banner-text p {
+    font-size: 1em;
+  }
+
+  /* Case Study Section */
+  .client-case-studies h2 {
+    font-size: 1.8em;
+  }
+
+  .case-studies-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .banner-text ul li {
+    font-size: 0.9em;
+  }
+
+  /* Stats Section */
+  .stat h3 {
+    font-size: 30px;
+  }
+
+  /* Features Section */
+  .features-section {
+    margin: 15px;
+  }
+
+  .feature-column {
+    min-width: 100%;
+  }
+
+  /* Reviews Section */
+  .carousel-arrows button {
+    font-size: 1.3rem;
+    width: 100%;
+  }
+
+  .reviews-carousel {
+    padding: 0 10px;
+  }
+
+}

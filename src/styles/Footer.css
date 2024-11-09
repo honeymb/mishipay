@@ -1,0 +1,360 @@
+/* Footer.css */
+.footer {
+  background-color: #22284c;
+  /* Dark blue color */
+  color: white;
+  padding: 20px;
+  position: relative;
+  /* To position the circles properly */
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #444;
+  /* Slightly lighter shade of #22284c */
+}
+
+.footer-description p {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.footer-app-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-app-links img {
+  width: 125px !important;
+  /* Set width for all images */
+  height: 35px !important;
+  /* Set height for all images */
+  object-fit: contain;
+  /* Ensure images maintain their aspect ratio */
+  transition: transform 0.3s ease;
+}
+
+.footer-app-links img:hover {
+  transform: scale(1.05);
+}
+
+.app-badge:hover {
+  transform: scale(1.05);
+}
+
+.footer-links-section {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  background-color: #1e2a47;
+  /* Darker shade of #22284c */
+  padding: 40px 0;
+  position: relative;
+  gap: 2rem;
+}
+
+/* Make sure each <p> inside footer-products is on a new line */
+.footer-products div p,
+.footer-helpful-links div p {
+  margin-bottom: 10px;
+  /*  space between links */
+  display: block;
+  /* Ensures each <p> is displayed on a new line */
+}
+
+
+.footer-links,
+.footer-products,
+.footer-helpful-links {
+  width: 100%;
+  background-color: #101741;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.footer-links,
+.footer-products,
+.footer-helpful-links {
+  transition: transform 0.3s ease;
+  /* Smooth transition for scaling */
+
+}
+
+.footer-links:hover,
+.footer-products:hover,
+.footer-helpful-links:hover {
+  transform: scale(1.05);
+}
+
+.footer-links h3,
+.footer-products h3,
+.footer-helpful-links h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.footer-links p,
+.footer-products p,
+.footer-helpful-links p {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  width: fit-content !important;
+  /*  for visual spacing */
+}
+
+.footer-links p::after,
+.footer-products p::after,
+.footer-helpful-links p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  /* Thickness of the underline */
+  background-color: currentColor;
+  /* Matches text color */
+  transition: width 0.3s ease;
+  /* Smooth transition */
+}
+
+.footer-links p:hover::after,
+.footer-products p:hover::after,
+.footer-helpful-links p:hover::after {
+  width: 100%;
+  /* Full width of the text */
+}
+
+
+.footer-links a,
+.footer-products a,
+.footer-helpful-links a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  margin: 0 10px;
+  font-size: 30px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: rgb(40, 116, 252);
+  /* Base color */
+}
+
+.social-icon i {
+  font-size: 30px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.circle_shape_1,
+.circle_shape_2 {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 30%;
+  opacity: 0.1;
+  /* Light opacity for a soft look */
+  clip-path: ellipse(50% 50% at 50% 50%);
+  /* Half-circle shape clipped from the top */
+  animation: amoeba_animation 7s linear infinite;
+}
+
+/* Position for Circle 1 - Top left */
+.circle_shape_1 {
+  top: -50px;
+  /*  height to control visibility */
+  right: 20%;
+  /* Move towards the left */
+  width: 150px;
+  height: 150px;
+  background-color: #5268f2;
+  /* Light blue gradient */
+}
+
+/* Position for Circle 2 - Bottom right */
+.circle_shape_2 {
+  top: 50px;
+  /* Lower placement within footer */
+  right: 15%;
+  /* Positioned towards the right */
+  width: 350px;
+  height: 350px;
+  background-image: linear-gradient(50deg, #5268f2 0%, #14b0d1 100%);
+  background-color: #075777;
+}
+
+.circle_shape_1,
+.circle_shape_2 {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 50%;
+  /* Full circle shape */
+  opacity: 0.1;
+  /* Light opacity for a soft look */
+  clip-path: ellipse(110% 70% at 50% 100%);
+  /* Half-circle cut from the top */
+  animation: amoeba_animation 7s linear infinite;
+}
+
+/* Position for Circle 1 - Top left */
+.circle_shape_1 {
+  top: -90px;
+  /*  height to control visibility */
+  right: 20%;
+  /* Move towards the left */
+  width: 150px;
+  height: 150px;
+  background-color: #5268f2;
+  /* Light blue gradient */
+}
+
+/* Position for Circle 2 - Bottom right */
+.circle_shape_2 {
+  top: -170px;
+  /* Lower placement within footer */
+  right: 15%;
+  /* Positioned towards the right */
+  width: 350px;
+  height: 350px;
+  background-image: linear-gradient(50deg, #5268f2 0%, #14b0d1 100%);
+  background-color: #075777;
+}
+
+/* Amoeba-like movement */
+@keyframes amoeba_animation {
+  0% {
+    transform: translateX(-50%) scale(1) translateY(0);
+  }
+
+  25% {
+    transform: translateX(-50%) scale(1.1) translateY(20px);
+  }
+
+  50% {
+    transform: translateX(-50%) scale(1) translateY(40px);
+  }
+
+  75% {
+    transform: translateX(-50%) scale(1.1) translateY(20px);
+  }
+
+  100% {
+    transform: translateX(-50%) scale(1) translateY(0);
+  }
+}
+
+.footer-logo {
+  width: 90px;
+  /*  width as needed */
+  height: auto;
+  /* Maintain aspect ratio */
+  margin-right: 8px;
+  /* Space between logo and text */
+  vertical-align: middle;
+  /* Align with the text */
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+
+  /* Make the footer top stack vertically */
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  /* Stack footer links section vertically */
+  .footer-links-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  /*  width of footer columns */
+  .footer-links,
+  .footer-products,
+  .footer-helpful-links {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-links p,
+  .footer-products p,
+  .footer-helpful-links p {
+    position: unset;
+    padding-bottom: 4px;
+  }
+
+  /* Stack social icons and footer text */
+  .footer-social {
+    flex-direction: column;
+  }
+
+  /*  footer text size */
+  .footer-bottom p {
+    font-size: 12px;
+  }
+
+  /*  the size of circles */
+  .circle_shape_1,
+  .circle_shape_2 {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Additional Mobile Layout for smaller screens (like 480px) */
+@media screen and (max-width: 480px) {
+
+  /* Further reduce padding and text sizes */
+  .footer-description p {
+    font-size: 14px;
+  }
+
+  .footer-logo {
+    width: 80px;
+  }
+
+  /*  the app images for mobile */
+  .footer-app-links img {
+    width: 100px;
+    height: 30px;
+  }
+
+  .social-icon {
+    font-size: 25px;
+  }
+
+  /* Smaller circles */
+  .circle_shape_1,
+  .circle_shape_2 {
+    width: 80px;
+    height: 80px;
+  }
+}
